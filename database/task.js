@@ -8,7 +8,7 @@ type: DataTypes.INTEGER,
 autoIncrement: true,
 primaryKey: true, 
 },
- tittle: {
+ title: {
 type: DataTypes.STRING,
 allowNull: false, 
 },
