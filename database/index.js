@@ -5,9 +5,14 @@ const User = require("./user");
 // TASK 3: Set up associations here
 // What kind of relationship is there between a user and a task?
 
+Task.belongsTo(User);
+User.hasMany(Task);
+
+
 // Export everything needed
 module.exports = {
   db,
   Task,
   User,
 };
+
