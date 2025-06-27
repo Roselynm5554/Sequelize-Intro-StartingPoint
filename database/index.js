@@ -11,3 +11,6 @@ module.exports = {
   Task,
   User,
 };
+Task.belongsTo(User);
+User.hasMany(Task);
+
