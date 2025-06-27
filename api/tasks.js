@@ -97,6 +97,21 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  try {
+    const task = {
+      title: req.body.title,
+      description: req.body.description,
+      completed: false
+    }
+    const newTask = await Task.create(task);
+    res.status(201).send(newTask);
+  } catch (err) {
+    console.error("Error creating a new task!", err);
+    res.status(500).send({ error: "Failed to create a new task" });
+  }
+});
+
 
 module.exports = router;
 
